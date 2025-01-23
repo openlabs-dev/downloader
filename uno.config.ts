@@ -1,4 +1,4 @@
-import { defineConfig, presetAttributify, presetUno, transformerDirectives } from 'unocss'
+import { defineConfig, presetAttributify, presetIcons, presetUno, transformerDirectives } from 'unocss'
 
 export default defineConfig({
   theme: {
@@ -7,6 +7,6 @@ export default defineConfig({
       secondary: '#152B46',
     },
   },
-  presets: [presetAttributify(), presetUno()],
+  presets: [presetAttributify(), presetUno(), presetIcons()],
   transformers: [transformerDirectives()],
 })
