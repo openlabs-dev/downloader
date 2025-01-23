@@ -16,12 +16,12 @@ withDefaults(defineProps<BadgeProps>(), {
   type: 'button',
 })
 
-const buttonVariants = cva('select-none whitespace-nowrap rounded border-0 rounded-md inline-flex justify-center items-center disabled:pointer-events-none disabled:opacity-50 shadow px-4 py-2', {
+const buttonVariants = cva('select-none whitespace-nowrap rounded-md inline-flex justify-center items-center disabled:pointer-events-none disabled:opacity-50 shadow px-4 py-2', {
   variants: {
     variant: {
-      default: 'bg-primary text-black',
-      ghost: 'bg- text-white',
+      default: 'bg-primary text-white',
       secondary: 'bg-secondary text-white',
+      ghost: 'bg-white text-black hover:bg-gray-1',
     },
   },
   defaultVariants: {
@@ -31,11 +31,10 @@ const buttonVariants = cva('select-none whitespace-nowrap rounded border-0 round
 </script>
 
 <template>
-  <Component :is="to ? NuxtLink : 'button'" :to='to' v-bind="{ ...$attrs, ...(!to && { type }), ...(disabled ? { disabled: true } : { tabindex: 0 }) }" :class="[buttonVariants({ variant }),  { 'flex-none': !$slots.default },]">
+  <Component :is="to ? NuxtLink : 'button'" :to="to" v-bind="{ ...$attrs, ...(!to && { type }), ...(disabled ? { disabled: true } : { tabindex: 0 }) }" :class="[buttonVariants({ variant }), { 'flex-none': !$slots.default }]">
     <slot name="icon">
       <DIcon v-if="icon" :icon="icon" :class="{ '-ml-0.2em mr-0.2em text-1.1em': $slots.default }" />
     </slot>
     <slot />
-    <div i-carbon-logo-github />
   </Component>
 </template>

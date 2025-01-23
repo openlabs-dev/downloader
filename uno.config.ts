@@ -7,6 +7,13 @@ export default defineConfig({
       secondary: '#152B46',
     },
   },
-  presets: [presetAttributify(), presetUno(), presetIcons()],
+  presets: [presetAttributify(), presetUno(), presetIcons({
+    prefix: ['i-', ''],
+    scale: 1.2,
+    extraProperties: {
+      'display': 'inline-block',
+      'vertical-align': 'middle',
+    },
+  })],
   transformers: [transformerDirectives()],
 })
