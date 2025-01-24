@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "downloader",
   "type": "module",
   "private": true,
   "packageManager": "pnpm@9.15.1",
