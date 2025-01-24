@@ -12,6 +12,9 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@unocss/nuxt": "^65.4.2",
+    "@vueuse/core": "^12.5.0",
+    "@vueuse/nuxt": "^12.5.0",
     "class-variance-authority": "^0.7.1"
   },
   "devDependencies": {
@@ -20,8 +23,6 @@
     "@iconify-json/ic": "^1.2.2",
     "@nuxt/eslint": "0.7.5",
     "@unocss/eslint-plugin": "^65.4.2",
-    "@unocss/nuxt": "^65.4.2",
-    "@vueuse/nuxt": "12.5.0",
     "eslint": "^9.18.0",
     "eslint-plugin-format": "^1.0.1",
     "nuxt": "^3.15.2",

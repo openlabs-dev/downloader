@@ -31,7 +31,11 @@ const buttonVariants = cva('select-none whitespace-nowrap rounded-md border-0 in
 </script>
 
 <template>
-  <Component :is="to ? NuxtLink : 'button'" :to="to" v-bind="{ ...$attrs, ...(!to && { type }), ...(disabled ? { disabled: true } : { tabindex: 0 }) }" :class="[buttonVariants({ variant }), { 'flex-none': !$slots.default }]">
+  <Component
+    :is="to ? NuxtLink : 'button'" :to="to"
+    v-bind="{ ...$attrs, ...(!to && { type }), ...(disabled ? { disabled: true } : { tabindex: 0 }) }"
+    :class="[buttonVariants({ variant }), { 'flex-none': !$slots.default }]"
+  >
     <slot name="icon">
       <DIcon v-if="icon" :icon="icon" :class="{ '-ml-0.2em mr-0.2em text-1.1em': $slots.default }" />
     </slot>
