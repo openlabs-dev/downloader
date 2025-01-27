@@ -1,8 +1,12 @@
+:root {
+  --color-neutral: #dbe2f0;
+}
+
 html,
 body {
   overflow: hidden;
   margin: 0;
-  --uno: bg-base font-sans;
+  --uno: dw-bg-base font-sans;
 }
 
 .dark {
@@ -11,4 +15,8 @@ body {
 
 * {
   min-width: 0;
+}
+
+.dw-border-base {
+  border: 1px solid var(--color-neutral);  
 }
