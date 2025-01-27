@@ -2,12 +2,13 @@ import { defineConfig, presetAttributify, presetIcons, presetUno, transformerDir
 
 export default defineConfig({
   shortcuts: {
-    'bg-base': 'bg-white dark:bg-[#020420]',
+    'dw-bg-base': 'bg-white dark:bg-[#020420]',
   },
   theme: {
     colors: {
       primary: '#BF3434',
       secondary: '#152B46',
+      neutral: '#dbe2f0',
     },
   },
   presets: [presetAttributify(), presetUno(), presetIcons({
