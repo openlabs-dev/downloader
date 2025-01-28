@@ -1,6 +1,8 @@
 <template>
   <div h-screen flex flex-col>
-    <Header />
-    <slot />
+    <NavbarSearch />
+    <main p-4>
+      <slot />
+    </main>
   </div>
 </template>
