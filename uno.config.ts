@@ -8,7 +8,7 @@ export default defineConfig({
     colors: {
       primary: '#BF3434',
       secondary: '#152B46',
-      neutral: '#dbe2f0',
+      neutral: '#90a1b9',
     },
   },
   presets: [presetAttributify(), presetUno(), presetIcons({
