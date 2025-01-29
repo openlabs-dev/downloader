@@ -16,7 +16,7 @@ withDefaults(defineProps<BadgeProps>(), {
   type: 'button',
 })
 
-const buttonVariants = cva('select-none whitespace-nowrap rounded-md border-0 inline-flex justify-center items-center disabled:pointer-events-none disabled:opacity-50 shadow px-4 py-2', {
+const buttonVariants = cva('select-none whitespace-nowrap rounded-md border-0 inline-flex justify-center items-center disabled:pointer-events-none disabled:opacity-50 shadow px-4 py-2 cursor-pointer', {
   variants: {
     variant: {
       default: 'bg-primary text-white',
