@@ -21,9 +21,15 @@ const Downloader = [{
         <Logo />
       </NuxtLink>
       <div flex items-center gap-2>
+        <DButton to="#" class="flex-row-reverse shadow-none" variant="ghost">
+          Documentation
+        </DButton>
+        <DButton to="#" class="flex-row-reverse shadow-none" variant="ghost">
+          About downloader
+        </DButton>
         <DDrowpdown>
           <template #trigger="{ click }">
-            <DButton icon="i-line-md-chevron-down" class="flex-row-reverse shadow-none" variant="ghost" @click="click">
+            <DButton icon="i-line-md-chevron-down" class="flex-row-reverse text-base shadow-none" variant="ghost" @click="click">
               Download
             </DButton>
           </template>
@@ -38,18 +44,12 @@ const Downloader = [{
             </div>
           </template>
         </DDrowpdown>
-        <DButton to="/documentation" class="flex-row-reverse shadow-none" variant="ghost">
-          Documentation
-        </DButton>
-        <DButton to="/about" class="flex-row-reverse shadow-none" variant="ghost">
-          About downloader
-        </DButton>
       </div>
       <div flex items-center gap-2>
-        <DButton to="/login">
+        <DButton to="#">
           Login
         </DButton>
-        <DButton to="/signUp" variant="ghost">
+        <DButton to="#" variant="ghost">
           Sign Up
         </DButton>
       </div>
