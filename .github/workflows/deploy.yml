@@ -23,22 +23,24 @@ jobs:
         with:
           deno-version: v2.x
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
           node-version: lts/*
+          cache: pnpm
 
       - name: Install step
-        run: "npm install"
+        run: pnpm install
 
       - name: Build step
-        run: "NITRO_PRESET=deno-deploy npm run build"
+        run: NITRO_PRESET=deno-deploy pnpm run build
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: "downloaders"
-          entrypoint: "server/index.ts"
-          root: ".output"
-          
-          
+          project: downloaders
+          entrypoint: server/index.ts
+          root: .output
