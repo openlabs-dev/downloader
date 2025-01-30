@@ -1,10 +1,12 @@
 <template>
-  <WrapperNav>
-    <NuxtLink to="/">
-      <NuxtImg src="/logo-x2.svg" alt="Logo" width="200" />
-    </NuxtLink>
-    <DButton to="/downloader" variant="default">
-      Downloader
-    </DButton>
-  </WrapperNav>
+  <NuxtLayout>
+    <WrapperNav>
+      <NuxtLink to="/">
+        <NuxtImg src="/logo-x2.svg" alt="Logo" width="200" />
+      </NuxtLink>
+      <DButton to="/downloader" variant="default">
+        Downloader
+      </DButton>
+    </WrapperNav>
+  </NuxtLayout>
 </template>
