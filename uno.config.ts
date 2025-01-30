@@ -1,4 +1,10 @@
-import { defineConfig, presetAttributify, presetIcons, presetUno, transformerDirectives } from 'unocss'
+import {
+  defineConfig,
+  presetAttributify,
+  presetIcons,
+  presetUno,
+  transformerDirectives,
+} from 'unocss'
 
 export default defineConfig({
   shortcuts: {
@@ -10,14 +16,21 @@ export default defineConfig({
       secondary: '#152B46',
       neutral: '#90a1b9',
     },
-  },
-  presets: [presetAttributify(), presetUno(), presetIcons({
-    prefix: ['i-', ''],
-    scale: 1.2,
-    extraProperties: {
-      'display': 'inline-block',
-      'vertical-align': 'middle',
+    fontFamily: {
+      onest: ['Onest'],
     },
-  })],
+  },
+  presets: [
+    presetUno(),
+    presetAttributify(),
+    presetIcons({
+      prefix: ['i-', ''],
+      scale: 1.2,
+      extraProperties: {
+        'display': 'inline-block',
+        'vertical-align': 'middle',
+      },
+    }),
+  ],
   transformers: [transformerDirectives()],
 })
