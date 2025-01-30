@@ -1,0 +1,23 @@
+ @font-face {
+   font-family: 'Onest';
+   font-weight: 200;
+   src: url('/fonts/onest-200.woff') format('woff');
+}
+
+@font-face {
+   font-family: 'Onest';
+   font-weight: 400;
+   src: url('/fonts/onest-400.woff') format('woff');
+}
+
+@font-face {
+   font-family: 'Onest';
+   font-weight: 600;
+   src: url('/fonts/onest-600.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Onest';
+  font-weight: 800;
+  src: url('/fonts/onest-800.woff') format('woff');
+}

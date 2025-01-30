@@ -1,9 +1,11 @@
+@import url('_fonts.css');
 
 html,
 body {
   overflow: hidden;
   margin: 0;
   --uno: dw-bg-base font-sans;
+  font-family: 'Onest', sans-serif;
 }
 
 .dark {
