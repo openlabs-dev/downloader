@@ -1,12 +1,58 @@
+<script lang="ts" setup>
+const Downloader = [{
+  name: 'GitHub',
+  icon: 'i-line-md-github',
+  to: '/downloader',
+}, {
+  name: 'Facebook',
+  icon: 'i-ic-baseline-facebook',
+  to: '/downloader',
+}, {
+  name: 'Youtube',
+  icon: 'i-line-md-youtube',
+  to: '/downloader',
+}]
+</script>
+
 <template>
   <NuxtLayout>
     <WrapperNav>
       <NuxtLink to="/">
         <Logo />
       </NuxtLink>
-      <DButton to="/downloader" variant="default">
-        Downloader
-      </DButton>
+      <div flex items-center gap-2>
+        <DDrowpdown>
+          <template #trigger="{ click }">
+            <DButton icon="i-line-md-chevron-down" class="flex-row-reverse shadow-none" variant="ghost" @click="click">
+              Download
+            </DButton>
+          </template>
+          <template #default>
+            <div w-45 p-2>
+              <NuxtLink
+                v-for="items in Downloader" :key="items.name" :to="items.to"
+                class="flex items-center gap-2 rounded-md p-2" hover="bg-primary/10"
+              >
+                <div :class="items.icon" /> {{ items.name }}
+              </NuxtLink>
+            </div>
+          </template>
+        </DDrowpdown>
+        <DButton to="/documentation" class="flex-row-reverse shadow-none" variant="ghost">
+          Documentation
+        </DButton>
+        <DButton to="/about" class="flex-row-reverse shadow-none" variant="ghost">
+          About downloader
+        </DButton>
+      </div>
+      <div flex items-center gap-2>
+        <DButton to="/login">
+          Login
+        </DButton>
+        <DButton to="/signUp" variant="ghost">
+          Sign Up
+        </DButton>
+      </div>
     </WrapperNav>
     <header>
       <div class="mx-auto px-6 py-16 text-center container">
