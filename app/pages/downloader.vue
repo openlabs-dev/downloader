@@ -8,7 +8,6 @@
           <div max-w-5xl w-full class="flex-[1_0_85%]" flex flex-col items-center gap-4>
             <Hero />
             <Search />
-            <Footer />
           </div>
         </div>
       </section>
