@@ -2,7 +2,7 @@
 const Downloader = [{
   name: 'GitHub',
   icon: 'i-line-md-github',
-  to: '/downloader',
+  to: '/github',
 }, {
   name: 'Facebook',
   icon: 'i-ic-baseline-facebook',

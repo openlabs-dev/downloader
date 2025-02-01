@@ -1,6 +1,6 @@
 <template>
   <div w-full>
-    <form action="/search" method="get" relative isolate w-full>
+    <form action="/github" method="get" relative isolate w-full>
       <div
         class="z-1 min-h-[35px] flex flex-1 items-center gap-3 rounded"
         px="0.75rem"
