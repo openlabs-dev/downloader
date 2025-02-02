@@ -2,7 +2,6 @@
 
 html,
 body {
-  overflow: hidden;
   margin: 0;
   --uno: dw-bg-base font-sans;
   font-family: 'Onest', sans-serif;
