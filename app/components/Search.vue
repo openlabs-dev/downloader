@@ -1,6 +1,16 @@
+<script setup lang="ts">
+interface RequestForm { q: string }
+
+function handleDonwloadFolder(event: Event) {
+  const form = event.target as HTMLFormElement
+
+  Object.fromEntries(new FormData(form)) as unknown as RequestForm
+}
+</script>
+
 <template>
   <div w-full>
-    <form action="/github" method="get" relative isolate w-full>
+    <form action="/github" method="get" relative isolate w-full @submit.prevent="handleDonwloadFolder">
       <div
         class="z-1 min-h-[35px] flex flex-1 items-center gap-3 rounded"
         px="0.75rem"
